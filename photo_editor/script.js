@@ -218,4 +218,5 @@ downloadBtn.addEventListener('click', () => {
     link.download = 'edited-photo.png';
     link.href = imagecanvas.toDataURL();
     link.click();
+    
 });
