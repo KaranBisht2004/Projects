@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo-Editor</title>
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <!-- Left Area: Controls & Canvas Preview -->
+            <div class="left">
+                <div class="top">
+                    <label for="image-input" class="btn">
+                        Choose Image
+                        <input id="image-input" type="file" accept="image/*" hidden>
+                    </label>
+
+                    <button class="btn" id="resetBtn">Reset</button>
+                    <button class="btn" id="download">Download</button>
+
+                    <!-- Undo & Redo Buttons -->
+                    <button class="btn" id="undoBtn" title="Undo (Ctrl+Z)">
+                        <i class="ri-arrow-go-back-line"></i>
+                    </button>
+                    <button class="btn" id="redoBtn" title="Redo (Ctrl+Y)">
+                        <i class="ri-arrow-go-forward-line"></i>
+                    </button>
+                </div>
+
+                <div class="bottom">
+                    <!-- Placeholder shown when no image is loaded -->
+                    <div class="placeholder">
+                        <i class="ri-image-ai-line"></i>
+                        <p>No image Chosen</p>
+                    </div>
+
+                    <!-- Canvas element where the image & filters render -->
+                    <canvas id="image-canvas"></canvas>
+                </div>
+            </div>
+
+            <!-- Right Area: Presets & Filter Sliders -->
+            <div class="right">
+                <div class="presets-container">
+                    <h2>Presets</h2>
+                    <div class="preset-buttons">
+                        <button class="preset-btn" onclick="applyPreset('oldSchool')">Old School</button>
+                        <button class="preset-btn" onclick="applyPreset('drama')">Drama</button>
+                        <button class="preset-btn" onclick="applyPreset('vintage')">Vintage</button>
+                        <button class="preset-btn" onclick="applyPreset('noir')">Noir</button>
+                        <button class="preset-btn" onclick="applyPreset('warmVibe')">Warm Vibe</button>
+                    </div>
+                </div>
+
+                <h2>Adjustment Tools</h2>
+                <div class="filters"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
