@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="infos">
+                <div class="info">
+                    <h3>High Score: <span id="hscore">0</span></h3>
+                </div>
+                <div class="info">
+                    <h3>Score: <span id="score">0</span></h3>
+                </div>
+                <div class="info">
+                    <h3>Time: <span id="time">00-00</span></h3>
+                </div>
+            </div>
+
+            <div id="board"></div>
+            <p class="swipe-hint">Swipe on the board to control the snake</p>
+
+            <!-- Start Screen Overlay -->
+            <div id="start-screen" class="overlay" role="dialog" aria-label="Start Game Screen">
+                <div class="overlay-card" id="start-card">
+                    <h1 class="overlay-title">Snake</h1>
+                    <p class="overlay-subtitle">Can you beat the high score?</p>
+                    <button id="start-btn" class="btn-primary overlay-btn">
+                        <span class="btn-icon">▶</span> Start Game
+                    </button>
+                    <p class="swipe-hint" style="display:block;margin-top:4px;">Use arrow keys, WASD, or swipe to play
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Game Over Screen Overlay -->
+            <div id="game-over-screen" class="overlay hidden" role="dialog" aria-label="Game Over Screen">
+                <div class="overlay-card" id="gameover-card">
+                    <div class="gameover-icon">💀</div>
+                    <h1 class="overlay-title gameover-title">Game Over</h1>
+                    <div class="score-panel">
+                        <div class="score-item">
+                            <span class="score-label">Score</span>
+                            <span class="score-value" id="final-score-display">0</span>
+                        </div>
+                        <div class="score-divider"></div>
+                        <div class="score-item">
+                            <span class="score-label">Best</span>
+                            <span class="score-value" id="final-hscore-display">0</span>
+                        </div>
+                    </div>
+                    <button id="restart-btn" class="btn-primary overlay-btn">
+                        <span class="btn-icon">↺</span> Play Again
+                    </button>
+                    <p class="swipe-hint" style="display:block;margin-top:2px;">Press any direction key or swipe to
+                        restart</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
