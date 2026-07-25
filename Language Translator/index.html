@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Product+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <h1 class="app-title">Language <span>Translator</span></h1>
+
+    <div class="container">
+
+        <div class="text-box">
+            <!-- Box 1: Source -->
+            <div id="box1">
+                <div class="lang-Option">
+                    <p class="active" data-lang="en-GB">English</p>
+                    <p data-lang="hi-IN">Hindi</p>
+                    <p data-lang="de-DE">German</p>
+                    <select class="custom-select" aria-label="More source languages">
+                        <option value="" disabled hidden>More...</option>
+                    </select>
+                </div>
+
+                <textarea id="fromText" placeholder="Enter text" maxlength="500"></textarea>
+
+                <div class="moreAction">
+                    <i class="fa-solid fa-volume-high" title="Listen"></i>
+                    <i class="fa-solid fa-keyboard" title="Clear text"></i>
+                    <p><span id="fromCharCount">0</span>/500</p>
+                </div>
+            </div>
+
+            <button id="swap-btn" class="swap-btn" title="Swap languages" aria-label="Swap languages">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </button>
+
+            <!-- Box 2: Target -->
+            <div id="box2">
+                <div class="lang-Option">
+                    <p data-lang="en-GB">English</p>
+                    <p class="active" data-lang="hi-IN">Hindi</p>
+                    <p data-lang="de-DE">German</p>
+                    <select class="custom-select" aria-label="More target languages">
+                        <option value="" disabled hidden>More...</option>
+                    </select>
+                </div>
+
+                <textarea id="toText" placeholder="Translation" readonly></textarea>
+
+                <div class="moreAction">
+                    <i class="fa-solid fa-volume-high" title="Listen"></i>
+                    <i class="fa-solid fa-copy" title="Copy translation"></i>
+                    <p><span id="toCharCount">0</span>/500</p>
+                </div>
+            </div>
+        </div>
+
+        <button id="translate-btn" class="translate-btn">
+            <span class="spinner"></span>
+            <span class="btn-label">Translate</span>
+        </button>
+    </div>
+
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
