@@ -1,26 +1,17 @@
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
-
+// ─── Lenis Smooth Scroll ─────────────────────────────────────────────────────
+const lenis = new Lenis({
+    duration: 2.4,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    smoothTouch: false,
+    wheelMultiplier: 1.8,
+    touchMultiplier: 2.5,
+    infinite: false,
 });
 
-const elementContainer = document.getElementById("elementContainer");
-const fixedImg = document.getElementById("fixed-image");
-const elements = document.querySelectorAll(".element");
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
-elementContainer.addEventListener("mouseenter", () => {
-    if (fixedImg) fixedImg.style.display = "block";
-});
-
-elementContainer.addEventListener("mouseleave", () => {
-    if (fixedImg) fixedImg.style.display = "none";
-});
-
-elements.forEach((element) => {
-    element.addEventListener("mouseenter", () => {
-        const imageSrc = element.getAttribute("data-img");
-        if (fixedImg) {
-            fixedImg.style.backgroundImage = `url("${imageSrc}")`;
-        }
-    });
-});

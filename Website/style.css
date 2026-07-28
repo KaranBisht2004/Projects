@@ -1,394 +1,302 @@
-@font-face {
-    font-family: 'neu';
-    src: url('./font/NeueHaasDisplayMedium.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: neu;
-    font-weight: 100;
-    src: url(./font/NeueHaasDisplayLight.ttf);
-}
-
-@font-face {
-    font-family: neu;
-    font-weight: 200;
-    src: url(./font/NeueHaasDisplayRoman.ttf);
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    outline: none;
     list-style: none;
-    font-family: 'neu', sans-serif;
 }
 
 :root {
-
-    --background-color: #EFEAE3;
-    --base-color: #000000;
-
-    --secondary-color: #FE330A;
-    --third-color: #ff9131;
-
-    --text-color: #1f1f1f;
-    --secondary-text-color: #EFEAE3;
-    --third-text-color: #504A45;
-    --fourth-text-color: #ffffff;
-
-    --btn-padding-leftRight: 21px;
-    --btn-padding-topBottom: 13px;
-
-    --btn-border-radius: 50px;
-
-    --border-color: #313131b3;
-
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+    --tertiary-color: #181818;
+    --quaternary-color: #a3a3a3;
+    --border-radius: 50px;
 }
+
+/* ============================================
+   Coolvetica Font Family Declarations
+   ============================================ */
+
+/* Regular */
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('fonts/Coolvetica-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Regular Italic */
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('fonts/Coolvetica-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Book */
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('fonts/Coolvetica-Book-Regular.woff2') format('woff2');
+    font-weight: 450;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('fonts/Coolvetica-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Heavy */
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('fonts/Coolvetica-Heavy-Regular.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('fonts/Coolvetica-Light-Regular.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
 
 html,
 body {
+    font-family: 'Coolvetica', sans-serif;
+    overflow-x: hidden;
+    letter-spacing: 1px;
+}
+
+#section1 {
     width: 100%;
-    height: 100%;
-    background-color: var(--background-color);
-}
-
-::selection {
-    background-color: var(--text-color);
-    color: var(--background-color);
-    padding: 0 10px;
-}
-
-#page1 {
-    position: relative;
     min-height: 100vh;
-    width: 100%;
-    background-color: var(--background-color);
-    padding: 0 2vw;
+    background-image: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0) 25%), url('/website/media/Mask\ group.png');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px 50px 50px 50px;
 }
 
-nav {
-    padding: 2vw 0vw;
-    width: 100%;
+#section1 header nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position: fixed;
+    left: 0;
+    top: 0%;
+    padding: 15px 40px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    text-transform: uppercase;
 }
 
 #nav-links {
     display: flex;
+    gap: 70px;
     align-items: center;
-    gap: 1.5vw;
 }
 
-#nav-links h4 {
+#nav-links a {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    padding: 6px 0;
     position: relative;
+    transition: all 0.3s ease;
+}
+
+#nav-links a:hover {
+    border-bottom: 2px solid var(--primary-color);
+    transform: translateY(-4px);
+    border-bottom-color: var(--primary-color);
+}
+
+.CTC-button {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.CTC-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+#hero-Section {
+    color: var(--primary-color);
+    max-width: 900px;
+}
+
+#hero-Section p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.35;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+#hero-Section h1 {
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 0.88;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#section2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 50px 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    margin-top: 70px;
+    gap: 30px;
+}
+
+#section2 #aboutUs {
+    width: 45%;
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+#aboutUs .section-tag {
     font-size: 18px;
-    font-weight: 600;
-    padding: var(--btn-padding-topBottom) var(--btn-padding-leftRight);
-    border: 1px solid var(--border-color);
-    border-radius: var(--btn-border-radius);
-    overflow: hidden;
-    transition: all ease 0.6s;
-}
-
-#nav-links h4 a {
-    color: var(--text-color);
-    position: relative;
-    z-index: 9;
-    transition: all ease 0.6s;
-}
-
-#nav-links h4:hover a {
-    color: var(--secondary-text-color);
-}
-
-#nav-links h4::after {
-    content: "";
-    border-radius: var(--btn-border-radius);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--base-color);
-    left: 0;
-    bottom: -100%;
-    transition: all ease 0.6s;
-}
-
-#nav-links h4:hover::after {
-    border-radius: 0;
-    bottom: 0;
-}
-
-#center {
-    height: 65vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-bottom: 1px solid #c0bebd;
-    padding-bottom: 3vw;
-}
-
-#left h3 {
-    width: 28vw;
-    font-size: 1.8vw;
-    line-height: 1.8vw;
-}
-
-#right h1 {
-    font-weight: 600;
-    font-size: 10vw;
-    line-height: 8.5vw;
-    text-align: right;
-}
-
-#page1 video {
-    border: none;
-    outline: none;
-    position: relative;
-    width: 100%;
-    border-radius: 30px;
-    margin: 2vw 0vw;
-}
-
-#hero-shapes {
-    position: absolute;
-    width: 46vw;
-    height: 36vw;
-    right: 0;
-    top: 70vh;
-}
-
-#hero1 {
-    height: 100%;
-    width: 100%;
-    filter: blur(20px);
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    background-color: var(--secondary-color);
-    position: absolute;
-}
-
-#hero2 {
-    height: 30vw;
-    width: 30vw;
-    border-radius: 50%;
-    filter: blur(20px);
-    background-color: var(--secondary-color);
-    position: absolute;
-    animation-name: animetion1;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#hero3 {
-    background: linear-gradient(var(--secondary-color), var(--third-color));
-    height: 30vw;
-    position: absolute;
-    width: 30vw;
-    border-radius: 50%;
-    filter: blur(25px);
-    animation-name: animetion2;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes animetion1 {
-    from {
-        transform: translate(5%, -5%);
-    }
-
-    to {
-        transform: translate(-20%, 30%);
-    }
-}
-
-@keyframes animetion2 {
-    from {
-        transform: translate(55%, -3%);
-    }
-
-    to {
-        transform: translate(0%, 10%);
-    }
-}
-
-#page2 {
-    min-height: 100vh;
-    width: 100%;
-    padding: 5vw 0;
-    position: relative;
-}
-
-#moving-text {
-    overflow-x: auto;
+    letter-spacing: 1.5px;
+    font-weight: 350;
+    color: var(--quaternary-color);
     white-space: nowrap;
-
 }
 
-#moving-text::-webkit-scrollbar {
-    display: none;
-}
-
-.container {
-    white-space: nowrap;
-    display: inline-block;
-    animation-name: move;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-#moving-text h1 {
-    font-size: 10vw;
-    display: inline-block;
-}
-
-#circle {
-    height: 90px;
-    width: 90px;
-    border-radius: 50%;
-    display: inline-block;
-    background-color: #FE320A;
-    margin: 1vw 2vw;
-}
-
-@keyframes move {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-#page2 {
-    min-height: 100vh;
-    width: 100%;
-    padding: 8vw 0;
-    position: relative;
-}
-
-#page2-bottom {
-    height: 80vh;
-    width: 100%;
-    padding: 4.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    z-index: 9;
-}
-
-#page2-bottom h1 {
-    font-size: 4vw;
-    width: 60%;
-    line-height: 4vw;
-}
-
-#page-bottom-right {
-    width: 25%;
-}
-
-#page-bottom-right img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-#page-bottom-right-text {
-    color: var(--text-color);
+#aboutUs #House-Design p:nth-child(1) {
+    font-size: 50px;
+    letter-spacing: 1.5px;
     font-weight: 450;
-    margin-top: 2vw;
-    font-size: 1vw;
+    color: var(--secondary-color);
+    line-height: 1.1;
+    margin-bottom: 25px;
 }
 
-#shape {
-    height: 32vw;
-    width: 32vw;
-    position: absolute;
-    border-radius: 50%;
-    background: linear-gradient(to top right, var(--secondary-color), var(--third-color));
-
-    top: 58%;
-    left: 25%;
-    filter: blur(20px);
-    animation-name: shape;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
+#aboutUs #House-Design p:nth-child(2) {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    font-weight: 250;
+    color: var(--quaternary-color);
+    line-height: 1.6;
+    max-width: 650px;
 }
 
-@keyframes shape {
-    from {
-        filter: blur(20px);
-        transform: translate(10%, -10%) skew(0);
-    }
-
-    to {
-        filter: blur(30px);
-        transform: translate(-10%, 10%) skew(-12deg);
-    }
-}
-
-#page3 {
-    min-height: 100vh;
-    width: 100%;
-    background-color: #EFEAE3;
-    padding: 4vw 0;
-}
-
-.element {
-    height: 150px;
-    width: 100%;
-    position: relative;
-
-    border-bottom: 1px solid #38383864;
-    overflow: hidden;
+#number {
+    width: 55%;
     display: flex;
-    align-items: center;
-    padding: 0 2vw;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
 }
 
-.element h2 {
-    font-size: 3vw;
-    position: relative;
-    z-index: 9;
-}
-
-.element .overlay {
-    height: 100%;
+#empty {
     width: 100%;
-    background-color: orange;
-    position: absolute;
-    left: 0;
-    top: -100%;
-    transition: all ease 0.25s;
+    height: 25vh;
 }
 
-.element:hover .overlay {
-    top: 0;
+#number #counter {
+    display: flex;
+    gap: 0px;
 }
 
 
+#number #counter .box {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    gap: 0px;
+}
 
-#fixed-image {
-    height: 30vw;
-    width: 24vw;
-    border-radius: 15px;
-    position: fixed;
-    z-index: 99;
-    left: 50%;
-    top: 25%;
-    display: none;
-    background-size: cover;
-    background-position: center;
-    pointer-events: none;
+.count {
+    font-size: 45px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+}
+
+#box3 {
+    margin-right: 50px;
+}
+
+#box1,
+#box2,
+#box3 {
+    margin-left: 20px;
+    padding: 5px 20px;
+    padding-bottom: 50px;
+    min-width: 160px;
+    /* prevents box resizing as digit count grows */
+}
+
+#number #counter .box p:nth-child(1) {
+    font-size: 70px;
+    font-weight: 350;
+    color: var(--secondary-color);
+    opacity: 70%;
+    letter-spacing: 1px;
+    font-variant-numeric: tabular-nums;
+    /* each digit same width — no jitter */
+    white-space: nowrap;
+    /* never wraps mid-animation */
+}
+
+#number #counter .box p:nth-child(2) {
+    font-size: 18px;
+    font-weight: 350;
+    color: var(--quaternary-color);
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+.line {
+    width: 1.5px;
+    height: 120px;
+    background-color: var(--secondary-color);
+    opacity: 0.50;
+    align-self: center;
+    margin: 0 15px;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
