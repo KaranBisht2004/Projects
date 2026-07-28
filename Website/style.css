@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    cursor: none; /* hide default cursor globally */
 }
 
 :root {
@@ -72,6 +73,33 @@ body {
     font-family: 'Coolvetica', sans-serif;
     overflow-x: hidden;
     letter-spacing: 1px;
+}
+
+.cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    mix-blend-mode: difference;        /* inverts whatever is underneath */
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 0.35s ease,
+                border 0.35s ease;
+}
+
+/* Expanded state — triggered by JS on hover over interactive elements */
+.cursor.expanded {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 1.5px solid #ffffff;
+    mix-blend-mode: difference;
 }
 
 #section1 {
