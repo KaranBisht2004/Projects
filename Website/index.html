@@ -4,73 +4,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Landing Page</title>
+    <title>Real-estate Website</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
 </head>
 
 <body>
-    <section id="section1">
-        <header>
-            <nav>
-                <a class="logo" href="#">LOGO</a>
+    <div id="cursor"></div>
+    <header>
+        <nav>
+            <a class="logo" href="#">Apex Living</a>
 
-                <div id="nav-links">
-                    <a href="#">Home</a>
-                    <a href="#section2">About</a>
-                    <a href="#">Property</a>
-                    <a href="#">Service</a>
-                    <a href="#">Blog</a>
-                </div>
-
-                <a class="CTC-button" href="#">LETS CONNECT</a>
-            </nav>
-        </header>
-
-        <main>
-            <div id="hero-Section">
-                <h1>TRUSTED REAL<br>ESTATE PARTNER</h1>
+            <div class="nav-list">
+                <a href="#">Home</a>
+                <a href="#section-2">About</a>
+                <a href="#section-3">Property</a>
+                <a href="#">Service</a>
+                <a href="#">Blog</a>
             </div>
-        </main>
-    </section>
 
-    <section id="section2">
-        <div id="aboutUs">
-            <p class="section-tag">About Us</p>
-            <div id="House-Design">
-                <p>Experts in <br> House Design</p>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-                    It has roots in a piece of classical Latin literature from 45 BC,
-                    making it over 2000 years old. Richard McClintock, a Latin professor
-                    at Hampden-Sydney College in Virginia, looked up one of the</p>
-            </div>
-        </div>
+            <a class="ctc-Button" href="#">LETS CONNECT</a>
+        </nav>
+        <div id="line"></div>
+    </header>
 
 
-        <div id="number">
-            <div id="empty"></div>
-            <div id="counter">
-                <div class="box" id="box1">
-                    <p class="count" data-target="120">0+</p>
-                    <p>Total Property</p>
+    <main>
+
+        <section id="section-1">
+            <div id="text">
+                <div id="heading-1Upper">
+                    <h1>TRUSRED REAL</h1>
                 </div>
-                <div class="line"></div>
-                <div class="box" id="box2">
-                    <p class="count" data-target="540">0+</p>
-                    <p>Happy Client</p>
+                <div id="heading-1Down">
+                    <div></div>
+                    <h1>ESTATE PARTNER</h1>
                 </div>
-                <div class="line"></div>
-                <div class="box" id="box3">
-                    <p class="count" data-target="12">0+</p>
-                    <p>Years of Service</p>
+
+                <div id="desc-1">
+                    <div></div>
+                    <p>YOUR TRUSTED PARTNER FOR SEAMLESS <br>
+                        REAL ESTATE SOLUTIONS AND FINDING THE PERFECT HOME.</p>
+                    <div id="btn-div">
+                        <a class="btns" href="#">For sell</a>
+                        <a class="btns" href="#">For Rent</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <img id="heroimg" src="/website/media/hero-section-img.png" alt="Luxury Real Estate House">
+        </section>
 
 
-    <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
-    <script src="script.js"></script>
+
+
+
+        <section id="section-2">
+            <div id="about-section">
+                <p id="about-text">About Us</p>
+
+                <div id="about-heading-section">
+                    <p id="about-heading">Experts in <br>
+                        House Design</p>
+                    <p id="about-desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                        in a piece of
+                        classical Latin literature from 45 BC ,making it over 2000 years old
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="number-section">
+                <div id="empty">
+                </div>
+                <div id="number-boxes">
+                    <div class="box">
+                        <p id="box1" class="box-number">0+</p>
+                        <p class="box-text">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="box">
+                        <p id="box2" class="box-number">0%</p>
+                        <p class="box-text">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="box">
+                        <p id="box3" class="box-number">0</p>
+                        <p class="box-text">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="features-section">
+
+            <div class="features-header">
+                <p id="features-tagline">Features</p>
+                <p id="features-heading">Your comfort - our priority</p>
+            </div>
+
+            <div class="features-body">
+
+                <div class="features-img-box">
+                    <div class="crossfade-container" id="image-card">
+                        <img src="media/Frame 1.png" class="fade-img active" alt="Frame 1">
+                        <img src="media/Frame 2.png" class="fade-img" alt="Frame 2">
+                        <img src="media/Frame 3.png" class="fade-img" alt="Frame 3">
+                        <img src="media/Frame 4.png" class="fade-img" alt="Frame 4">
+                    </div>
+                </div>
+
+                <div class="features-content-box">
+
+                    <div class="feature-card">
+                        <p class="card-title">Practicality</p>
+                        <p class="card-desc">
+                            Contrary to popular belief, Lorem Ipsum is not simply random text.
+                            It has roots in a piece of classical Latin literature from 45 BC,
+                            making it over 2000 years old. Richard McClintock, a Latin professor
+                            at Hampden-Sydney College in Virginia, looked up one of the
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <p class="card-title">Individuality</p>
+                        <p class="card-desc">
+                            Contrary to popular belief, Lorem Ipsum is not simply random text.
+                            It has roots in a piece of classical Latin literature from 45 BC,
+                            making it over 2000 years old. Richard McClintock, a Latin professor
+                            at Hampden-Sydney College in Virginia, looked up one of the
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="section-3">
+
+            <!-- Header Section -->
+            <div class="heading-div">
+                <h2 id="properties-heading">Discover BrandName Properties</h2>
+                <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text.<br>
+                    It has roots in a piece of classical Latin literature from 45 BC.
+                </p>
+            </div>
+
+            <!-- Filter Buttons Bar -->
+            <div class="properties-btn">
+                <div class="properties-btn-left">
+                    <a class="section-3-btn" href="#">For Sell</a>
+                    <a class="section-3-btn" href="#">For Rent</a>
+                </div>
+
+                <a class="properties-btn-right" href="#">Explore More</a>
+            </div>
+
+            <!-- Properties Grid -->
+            <div class="properties-card-grid">
+
+                <!-- Card 1 -->
+                <div class="property-card" id="property-card-1">
+                    <div class="card-img">
+                        <img src="/website/media/card1/card1png.png" alt="Lorem Ipsum Modern House">
+                    </div>
+
+                    <div class="property-info">
+                        <div class="property-header">
+                            <h3 class="property-title">LOREM IPSUM MODERN HOUSE</h3>
+                            <span class="property-price">$100,000</span>
+                        </div>
+
+                        <div class="property-meta">
+                            <span class="property-specs">204 M2 - 6ROOMS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="property-card" id="property-card-2">
+                    <div class="card-img">
+                        <img src="/website/media/card1/card1png.png" alt="Lorem Ipsum Modern House">
+                    </div>
+
+                    <div class="property-info">
+                        <div class="property-header">
+                            <h3 class="property-title">LOREM IPSUM MODERN HOUSE</h3>
+                            <span class="property-price">$100,000</span>
+                        </div>
+
+                        <div class="property-meta">
+                            <span class="property-specs">204 M2 - 6ROOMS</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"
+        integrity="sha512-oJ8QbaQThQoJZ7oEv+29jfPM6CcP+zUxh3PKJs1vyOhx0UraUrE7PQgeItu3dOuCJyrzWpoYMsVjkkPEBzbUqw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="script.js" defer></script>
 </body>
 
 </html>
