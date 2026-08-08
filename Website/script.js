@@ -405,7 +405,7 @@ if (container) {
             <div class="section-5-card-Detail">
                 <div class="upper-Detail">
                     <p class="card-date">${card.date}</p>
-                    <p class="card-title">${card.title}</p>
+                    <p id='text-title' class="card-title">${card.title}</p>
                 </div>
                 <div class="read-moreBTN">
                     <a href="#">${card.ctaText}</a>

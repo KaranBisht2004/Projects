@@ -535,6 +535,14 @@ section {
     font-weight: 400;
 }
 
+#text-title {
+    padding-bottom: var(--spacing-sm);
+    font-size: var(--fs-lg);
+    line-height: var(--lh-xl);
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
 .card-desc {
     font-size: var(--fs-sm);
     font-weight: 300;
